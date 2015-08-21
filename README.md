@@ -1,4 +1,4 @@
-# WebDev-Recources-Chrome-Extension
+# WebDev-Resources-Chrome-Extension
 List of links For Web Designers and Developers
 
 ----------------------------------------------
