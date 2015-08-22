@@ -63,6 +63,7 @@ app.factory('sortable', ['store', function (store) {
 }]);
 
 
+// Extension Path
 ext_path = chrome.extension.getURL;
 
 

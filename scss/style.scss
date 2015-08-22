@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Strait);
+
+$font-strait: 'Strait', sans-serif;
+
+//colors
+$color-batman: #000;
+$color-cloud: #eceeef;
+$color-snow: #fff;
+$color-gold: #A1673E;
+$color-lightwolf: #878f92;
+$color-wolf: #5a5959;
+
+body {
+font-family: $font-strait;
+padding-top: 100px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  color: $color-lightwolf;
+  text-align: center;
+}
+
+.main-button {
+	background: rgba(0,0,0,0.6);
+	padding: 20px 30px 20px 30px;
+	display: block;
+	text-align: center;
+	position: relative;
+	max-width: 300px;
+	font-size: 2em;
+	margin: 0 auto;
+	text-transform: uppercase;
+	color: $color-snow;
+	font-family: $font-strait;
+	overflow: hidden;
+	border: solid 2px $color-gold;
+	@include transition (all .3s);
+		span {
+			position: relative;
+			z-index: 1;
+		}
+		.button-overlay {
+			position:absolute;
+		  left:0;
+		  right:0;
+		  margin-left: auto;
+		  margin-right: auto;
+			height: 0;
+			width: 0;
+			@include transition (all .4s);
+			border-radius: 50%;
+			background: rgba(161, 103, 62, .8);
+			top: 30px;
+		}
+	&:hover {
+		border: solid 2px $color-snow;
+		cursor: pointer;
+		@include transition (all .6s);
+		.button-overlay {
+			width: 600px;
+			top: -180px;
+			height: 600px;
+			left: -40px;
+			@include transition (all .4s);
+		}
+	}
+}

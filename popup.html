@@ -15,18 +15,19 @@
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
   </head>
-  <body ng-app="myApp"  ng-csp="no-unsafe-eval" ng-controller="demo" >
+  <body ng-app="myApp"  ng-csp="no-unsafe-eval" ng-controller="demo">
 
+  <div class="wrap-app {{ isChecked }}" ng-app="app" ng-controller="CheckCtrl">
 
 
   <h1>Front-End Resources</h1>
-  
+
   <div  class="sortapp pattern example" id="pattern" >
-  
+
   <div class="{{ isChecked }}"  ng-app="app" ng-controller="CheckCtrl">
   <input id="check" type="checkbox" ng-model="value" ng-change="checkIt()" class="switch"/>
   <label for="check" class="switch__label"></label>
-</div> 
+</div>
 
     <!-- Use directive ng-sortable -->
     <ul ng-sortable="sortableOptions" class="list img-list">
@@ -74,7 +75,7 @@
   </div> -->
 
 
-
+</div>
   <script src="js/angular.min.js"></script>
   <script src="js/Sortable.js"></script>
   <script src="js/ng-sortable.js"></script>
