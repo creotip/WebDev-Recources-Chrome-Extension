@@ -1,10 +1,24 @@
+//// Material DropDown
+
+var kebab = document.querySelector('.kebab'),
+    middle = document.querySelector('.middle'),
+    cross = document.querySelector('.cross'),
+    dropdown = document.querySelector('.dropdown');
+
+kebab.addEventListener('click', function() {
+  middle.classList.toggle('active');
+  cross.classList.toggle('active');
+  dropdown.classList.toggle('active');
+})
+
+//// Ng-Sortable
 
 var app = angular.module('myApp', ['ng-sortable']);
 
 app.config( [
     '$compileProvider',
     function( $compileProvider )
-    {
+    {   
         $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension):/);
         // Angular before v1.2 uses $compileProvider.urlSanitizationWhitelist(...)
     }
@@ -63,7 +77,6 @@ app.factory('sortable', ['store', function (store) {
 }]);
 
 
-// Extension Path
 ext_path = chrome.extension.getURL;
 
 
@@ -99,14 +112,14 @@ app.controller('demo', [
         url: 'codegeekz.com',
         icon: ext_path('/images/codegeekz.png'),
         desc: 'Web Developer Tools & Resources'
-      },
+      },     
       {
         id: 5,
         name: 'webdesignerdepot',
         url: 'webdesignerdepot.com',
         icon: ext_path('/images/webdesignerdepot.png'),
         desc: 'Web Developer Tools & Resources'
-      }
+      }        
      ]);
 
     $scope.models = sortable.models;
