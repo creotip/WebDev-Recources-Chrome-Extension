@@ -119,7 +119,14 @@ app.controller('demo', [
         url: 'webdesignerdepot.com',
         icon: ext_path('/images/webdesignerdepot.png'),
         desc: 'Web Developer Tools & Resources'
-      }        
+      },
+      {
+        id: 6,
+        name: 'onextrapixel',
+        url: 'onextrapixel.com',
+        icon: ext_path('/images/onextrapixel.png'),
+        desc: 'Web Design and Development Online Magazine'
+      }         
      ]);
 
     $scope.models = sortable.models;
